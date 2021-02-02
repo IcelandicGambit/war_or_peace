@@ -47,4 +47,21 @@ class DeckTest < Minitest::Test
     deck = build_deck
     assert_equal(2/3,deck.percent_high_ranking)
   end
-end
+
+  def test_you_can_remove_card
+     card1 = Card.new(:diamond, 'Queen', 12)
+     card2 = Card.new(:spade, '3', 3)
+     card3 = Card.new(:heart, 'Ace', 14)
+     cards = [card1, card2, card3]
+     deck = Deck.new(cards)
+     deck.remove_card
+     refute_includes(deck.cards,card1)
+   end
+
+   def test_you_can_add_card
+     deck = build_deck
+     card4 = Card.new(:club, '5', 5)
+     deck.add_card(card4)
+     assert_includes(deck.cards, card4)
+   end
+ end
