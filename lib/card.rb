@@ -26,4 +26,4 @@ class Card
        @suit == other.suit && @value == other.value && @rank == other.rank
      end
    end
- en
+ end
