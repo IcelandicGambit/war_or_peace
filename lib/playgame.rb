@@ -34,10 +34,10 @@ class PlayGame
         puts "*mutually assured destruction* 6 cards removed from play"
       end
       if @p1.has_lost?
-        puts "*~*~*~* "+@p2+" has won the game! *~*~*~*"
+        puts "*~*~*~* "+@p2.name+" has won the game! *~*~*~*"
         break
       elsif @p2.has_lost?
-        puts "*~*~*~* "+@p1+" has won the game! *~*~*~*"
+        puts "*~*~*~* "+@p1.name+" has won the game! *~*~*~*"
         break
       end
 
