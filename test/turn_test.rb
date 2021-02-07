@@ -110,6 +110,7 @@ class TurnTest < Minitest::Test
     turn.type
     assert_equal p1, turn.winner
   end
+
   def test_pile_cards_basic
      card1 = Card.new(:heart, 'Jack', 11)
      card3 = Card.new(:heart, '9', 9)

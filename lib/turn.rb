@@ -1,5 +1,7 @@
 class Turn
-  attr_reader :player1, :player2, :spoils_of_war
+  attr_reader :player1,
+              :player2,
+              :spoils_of_war
   def initialize(p1, p2)
     @player1 = p1
     @player2 = p2
@@ -73,6 +75,6 @@ class Turn
     @spoils_of_war.each do |card|
       winner.deck.add_card(card)
     end
-    @spoils_of_war.clear
+    #@spoils_of_war.clear
   end
 end
